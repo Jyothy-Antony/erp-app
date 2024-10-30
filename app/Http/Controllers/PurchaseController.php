@@ -27,13 +27,10 @@ class PurchaseController extends Controller
 
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'supplier_id' => 'required|exists:suppliers,id',
-        //     'order_date' => 'required|date',
-        //     'items' => 'required|array'
-        // ]);
-
-        //dd(request('items'));
+        $request->validate([
+            'supplier_id' => 'required|exists:suppliers,id',
+            'order_date' => 'required|date'
+        ]);
 
         $auto_gen_key = 'ORDER';
         $latest_order = PurchaseOrder::latest()->first();
