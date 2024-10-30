@@ -1,0 +1,10 @@
+.error-message {
+  color: red;
+  font-size: 12px;
+  position:absolute;
+}
+
+.actionbtn{
+  margin-right: 5px !important;
+  border-radius: 4px !important;
+}
